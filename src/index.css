@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Le corps de la page aura une police pixel rétro */
+body {
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  background-color: #ff00ff; 
+  color: #00ffff; 
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: center; /* Tout centré, comme dans les vieux jeux */
+  overflow-x: hidden; /* Pas de scroll horizontal*/
+}
+
+/* l'alignement par flex */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px;
+  flex-wrap: wrap; /* Les éléments peuvent se placer sur plusieurs lignes si besoin */
+}
+
+/* Le Dashboard  */
+.dashboard {
+  width: 30%;
+  background-color: #0000ff; 
+  padding: 20px;
+  border: 5px solid #ff00ff;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  height: 100%;
+  overflow-y: auto; 
+  max-height: 90vh;
+  z-index: 10; 
+  box-shadow: 0 0 20px #ffcc00; /* Une ombre jaune autour pour l'effet rétro */
+}
+
+/* Le titre de Dashboard */
+header h1 {
+  font-size: 2em;
+  color: #ffcc00; /* Jaune néon, (j'ai trouvé cette couleur sur la plateforme Coolors avec l'aide du prof de design) */
+  text-transform: uppercase; 
+  font-weight: bold;
+  border-bottom: 3px solid #ff6600; 
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px #ff6600;
+  animation: blink 1s step-start infinite; /* Le titre clignote (Faite à l'aide de l'IA)*/
+}
+
+/* Clignotement du titre (Faite à l'aide de l'IA) */
+@keyframes blink {
+  50% {
+    opacity: 0; /
+  }
+}
+
+/* Medium titles */
+h2 {
+  color: #ffff00; 
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  text-decoration: underline; 
+}
+
+/* Les paragraphes et les listes */
+p, ul {
+  font-size: 1.2em;
+  color: #ffffff; 
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: square; 
+}
+
+/* Boutons avec un effet lumineux au survol */
+button {
+  background-color: #ff6600;
+  color: #ffffff;
+  border: 3px solid #003366;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-transform: uppercase; 
+  font-weight: bold;
+  box-shadow: 0 0 10px #ffcc00; /* Ombre jaune autour du bouton, comme un effet néon */
+}
+
+
+button:hover {
+  background-color: #003366; 
+  color: #ffcc00; 
+  box-shadow: 0 0 20px #ffcc00; 
+}
+
+/* les images de mocktails et recettes */
+.mocktail img, .recipe img {
+  width: 150px;
+  margin-left: 20px;
+  border: 3px solid #ff00ff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+/* L'éditeur Markdown */
+.editor {
+  width: 65%;
+  background-color: #ffff00; 
+  padding: 20px;
+  border: 5px solid #ff6600; 
+  box-shadow: 0 0 15px #ff6600; 
+  margin-right: 35%; /* Pour que l'éditeur ne touche pas le bord droit */
+}
+
+/* Centrage du contenu de l'éditeur et taille maximum pour éviter qu'il devienne trop large */
+.editor-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Les champs de texte et textarea */
+input[type="text"], textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 3px solid #003366; 
+  border-radius: 0; 
+  background-color: #ffffff;
+  font-size: 1.2em;
+  color: #003366; 
+}
+
+textarea {
+  height: 200px;
+}
+
+#preview {
+  background-color: #ffcc00;
+  border: 3px solid #003366; 
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.file-actions button {
+  margin-left: 10px;
+}
+
+.container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
